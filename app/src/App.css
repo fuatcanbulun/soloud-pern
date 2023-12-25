@@ -1,0 +1,16 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --textPrimary: #ffffff;
+  --textSecondary: #ddc8ff;
+  --textWhite: #ffffff;
+  --activePrimary: #a869e4;
+  --hoverPrimary: #9627fd;
+
+  --colorPrimary: #000000;
+  --colorSecondary: #0c0c0e;
+  --colorTertiary: #b4b9ca;
+}
