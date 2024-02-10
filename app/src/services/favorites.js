@@ -1,14 +1,7 @@
 import { Get, Post } from "./requests";
-import { jwtDecode } from "jwt-decode";
-const token = localStorage.getItem("access_token");
-let decoded = "";
 
-if (token) {
-  decoded = jwtDecode(token);
-}
-
-export const addFavorite = async (video_id) => {
-  const postBody = { user_id: decoded.id, video_id };
+export const addFavorite = async (user_id, video_id) => {
+  const postBody = { user_id, video_id };
   let result;
   await Post(
     "favorites",
@@ -23,10 +16,10 @@ export const addFavorite = async (video_id) => {
   return result;
 };
 
-export const getFavorites = async () => {
+export const getFavorites = async (user_id) => {
   let result;
   await Get(
-    `favorites/${decoded.id}`,
+    `favorites/${user_id}`,
     (response) => {
       result = response;
     },

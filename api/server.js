@@ -6,10 +6,11 @@ import onlinesRoutes from "./src/onlines/routes.js";
 import favoritesRoutes from "./src/favorites/routes.js";
 import authRoutes from "./src/auth/routes.js";
 import cookieParser from "cookie-parser";
+import tokenRoutes from "./src/token/routes.js";
 import cors from "cors";
 
 const app = express();
-const port = 3001;
+const port = 3002;
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -32,6 +33,7 @@ app.use("/api/v1/videos", videosRoutes);
 app.use("/api/v1/categories", categoriesRoutes);
 app.use("/api/v1/users", usersRoutes);
 app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/token", tokenRoutes);
 app.use("/api/v1/onlines", onlinesRoutes);
 app.use("/api/v1/favorites", favoritesRoutes);
 

@@ -77,6 +77,7 @@ const LoginPanel = ({ handleLogin, handleSignUp, setIsNewUser, isNewUser }) => {
               <Space height={10} />
               <LoginPanelLabel>Password Again</LoginPanelLabel>
               <LoginPanelInput
+                type="password"
                 onChange={(e) => {
                   setLoginValues({
                     ...formValues,

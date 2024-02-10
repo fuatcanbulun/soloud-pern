@@ -13,10 +13,12 @@ import Button from "../button";
 import usePlay from "../../hooks/usePlay";
 import useFavorite from "../../hooks/useFavorite";
 import { addFavorite } from "../../services/favorites";
+import { jwtDecode } from "jwt-decode";
 
 const MediaBox = ({ id, title, artist, favorite, image, refreshPage }) => {
   const { playVideo } = usePlay();
-  const { toggleFavorite } = useFavorite();
+  const token = localStorage.getItem("access_token");
+  const decoded = jwtDecode(token);
 
   const handleRefresh = (response) => {
     if (response.refresh) {
@@ -58,7 +60,7 @@ const MediaBox = ({ id, title, artist, favorite, image, refreshPage }) => {
           size="xs"
           icon={favorite ? "AiFillHeart" : "AiOutlineHeart"}
           iconColor={favorite ? "activePrimary" : "textPrimary"}
-          onClick={async () => handleRefresh(await addFavorite(id))}
+          onClick={async () => handleRefresh(await addFavorite(decoded.id, id))}
         />
       </MediaBoxFooter>
     </MediaBoxContainer>

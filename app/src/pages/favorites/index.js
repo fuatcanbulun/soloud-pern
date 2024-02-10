@@ -7,10 +7,13 @@ import MediaBox from "../../components/mediaBox";
 import Text from "../../components/text";
 import { getFavorites } from "../../services/favorites";
 import { getVideo } from "../../services/videos";
+import { jwtDecode } from "jwt-decode";
 
 const Favorites = () => {
   const store = useStore();
   const [favorites, setFavorites] = useState([]);
+  const token = localStorage.getItem("access_token");
+  const decoded = jwtDecode(token);
 
   useEffect(() => {
     console.log("fuatcan1");
@@ -20,7 +23,7 @@ const Favorites = () => {
   const getAllFavorites = async () => {
     console.log("fuatcan2");
     const data = [];
-    for (const item of await getFavorites()) {
+    for (const item of await getFavorites(decoded.id)) {
       console.log("fuatcan3", item);
 
       data.push(await getVideo(item.video_id));

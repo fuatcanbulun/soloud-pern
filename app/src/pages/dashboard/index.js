@@ -5,8 +5,7 @@ import MediaBox from "../../components/mediaBox";
 import Tabs from "../../components/tabs";
 import Row from "../../components/row";
 import Column from "../../components/column";
-import { useStore } from "../../contexts/StoreContext";
-import { Get } from "../../services/requests";
+import { jwtDecode } from "jwt-decode";
 
 import { getFavorites } from "../../services/favorites";
 import { getVideos } from "../../services/videos";
@@ -17,7 +16,8 @@ const Dashboard = () => {
   const [videos, setVideos] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [categories, setCategories] = useState([]);
-  const store = useStore();
+  const token = localStorage.getItem("access_token");
+  const decoded = jwtDecode(token);
 
   useEffect(() => {
     getAllFavorites();
@@ -29,7 +29,7 @@ const Dashboard = () => {
     setVideos(await getVideos());
   };
   const getAllFavorites = async () => {
-    setFavorites(await getFavorites());
+    setFavorites(await getFavorites(decoded.id));
   };
 
   const getAllCategories = async () => {
