@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Post } from "../../services/requests";
 import LoginLayout from "../../components/templates/loginLayout";
-import LoginPanel from "../../components/organisms/loginPanel";
+import LoginPanel from "../../components/loginPanel";
 
 const Login = ({ setAuthorization }) => {
   const [isNewUser, setIsNewUser] = useState(false);

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PageLayout from "../../components/templates/pageLayout";
-import Map from "../../components/organisms/map";
-import MapItem from "../../components/molecules/mapItem";
+import Map from "../../components/map";
+import MapItem from "../../components/mapItem";
 import { fromLonLat } from "ol/proj";
 import { Get } from "../../services/requests";
 

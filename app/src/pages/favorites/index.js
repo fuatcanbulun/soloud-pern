@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import PageLayout from "../../components/templates/pageLayout";
-import Row from "../../components/atoms/row";
-import Column from "../../components/atoms/column";
+import Row from "../../components/row";
+import Column from "../../components/column";
 import { useStore } from "../../contexts/StoreContext";
-import MediaBox from "../../components/organisms/mediaBox";
-import Text from "../../components/atoms/text";
+import MediaBox from "../../components/mediaBox";
+import Text from "../../components/text";
 import { getFavorites } from "../../services/favorites";
 import { getVideo } from "../../services/videos";
 

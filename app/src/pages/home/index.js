@@ -7,10 +7,10 @@ import Detail from "../detail";
 import Favorites from "../favorites";
 import Trends from "../trends";
 import MusicMap from "../music-map";
-import Row from "../../components/atoms/row";
-import Column from "../../components/atoms/column";
-import TopBar from "../../components/organisms/topbar";
-import SideBar from "../../components/organisms/sidebar";
+import Row from "../../components/row";
+import Column from "../../components/column";
+import TopBar from "../../components/topbar";
+import SideBar from "../../components/sidebar";
 import { useEffect } from "react";
 
 const menuData = [

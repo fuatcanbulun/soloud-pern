@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import PageLayout from "../../components/templates/pageLayout";
-import Row from "../../components/atoms/row";
-import Column from "../../components/atoms/column";
-import Text from "../../components/atoms/text";
-import MediaItem from "../../components/organisms/mediaItem";
-import PieChart from "../../components/organisms/pieChart";
+import Row from "../../components/row";
+import Column from "../../components/column";
+import Text from "../../components/text";
+import MediaItem from "../../components/mediaItem";
+import PieChart from "../../components/pieChart";
 import { useStore } from "../../contexts/StoreContext";
 import { getVideos } from "../../services/videos";
 import { getCategories } from "../../services/categories";

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import PageLayout from "../../components/templates/pageLayout";
 
-import MediaBox from "../../components/organisms/mediaBox";
-import Tabs from "../../components/organisms/tabs";
-import Row from "../../components/atoms/row";
-import Column from "../../components/atoms/column";
+import MediaBox from "../../components/mediaBox";
+import Tabs from "../../components/tabs";
+import Row from "../../components/row";
+import Column from "../../components/column";
 import { useStore } from "../../contexts/StoreContext";
 import { Get } from "../../services/requests";
 

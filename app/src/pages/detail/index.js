@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import PageLayout from "../../components/templates/pageLayout";
-import Video from "../../components/atoms/video";
-import Text from "../../components/atoms/text";
-import Space from "../../components/atoms/space";
-import Row from "../../components/atoms/row";
-import Column from "../../components/atoms/column";
+import Video from "../../components/video";
+import Text from "../../components/text";
+import Space from "../../components/space";
+import Row from "../../components/row";
+import Column from "../../components/column";
 import { useLocation } from "react-router-dom";
 import { Get } from "../../services/requests";
 
