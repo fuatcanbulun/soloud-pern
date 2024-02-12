@@ -29,12 +29,12 @@ app.get("/", (req, res) => {
   res.send("Soloud Api");
 });
 
-app.use("/api/v1/videos", videosRoutes);
-app.use("/api/v1/categories", categoriesRoutes);
-app.use("/api/v1/users", usersRoutes);
-app.use("/api/v1/auth", authRoutes);
-app.use("/api/v1/token", tokenRoutes);
-app.use("/api/v1/onlines", onlinesRoutes);
-app.use("/api/v1/favorites", favoritesRoutes);
+app.use("/soloud/api/v1/videos", videosRoutes);
+app.use("/soloud/api/v1/categories", categoriesRoutes);
+app.use("/soloud/api/v1/users", usersRoutes);
+app.use("/soloud/api/v1/auth", authRoutes);
+app.use("/soloud/api/v1/token", tokenRoutes);
+app.use("/soloud/api/v1/onlines", onlinesRoutes);
+app.use("/soloud/api/v1/favorites", favoritesRoutes);
 
 app.listen(port, () => console.log(`app listening on ${port}`));

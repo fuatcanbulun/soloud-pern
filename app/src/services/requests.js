@@ -2,8 +2,8 @@ import axios from "axios";
 
 axios.defaults.baseURL =
   process.env.NODE_ENV === "production"
-    ? "/api/v1/"
-    : "http://localhost:3002/api/v1/";
+    ? "/soloud/api/v1/"
+    : "http://13.48.182.144/soloud/api/v1/";
 
 axios.interceptors.request.use(
   async (config) => {
